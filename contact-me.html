@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Day 2 | Form And Navbar</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="nav__brand">
+        <a href="index.html">
+          <img src="./assets/images/logo.png" alt="logo" />
+        </a>
+      </div>
+      <ul class="nav__links">
+        <li class="nav__item active">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="nav__item">
+          <a href="./blog.html">Blog</a>
+        </li>
+      </ul>
+      <div class="nav__end">
+        <a href="./contact-me.html">Contact Me</a>
+      </div>
+    </nav>
+    <section class="section__contact" id="contact">
+      <div class="form__container">
+        <h3>Contact Me</h3>
+        <div class="validation__alert">
+          <p id="error__msg"></p>
+          <button type="button" class="close__btn" onclick="closeAlert()">
+            &times;
+          </button>
+        </div>
+
+        <form action="" id="contact__form" autocomplete="off">
+          <div class="input__group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" />
+          </div>
+          <div class="input__group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your email address"
+            />
+          </div>
+          <div class="input__group">
+            <label for="phone">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              placeholder="Enter your phone number"
+            />
+          </div>
+          <div class="input__group">
+            <label for="subject">Subject</label>
+            <select name="subject" id="subject">
+              <option value="" disabled selected>Choose Subject</option>
+              <option value="Let's Collaborate">Let's Collaborate</option>
+              <option value="Let's Talk">Let's Talk</option>
+              <option value="Let's Do A Project">Let's Do A Project</option>
+            </select>
+          </div>
+          <div class="input__group">
+            <label for="message">Your Message</label>
+            <textarea name="message" id="message"></textarea>
+          </div>
+          <div class="input__group">
+            <button type="button" onclick="getData()" class="btn__submit">
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <script src="./assets/js/contact.js"></script>
+  </body>
+</html>

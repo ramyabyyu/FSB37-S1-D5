@@ -1,0 +1,106 @@
+:root {
+  --border-radius: 0.5rem;
+  --primary-color: #222;
+  --secondary-color: slateblue;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+  border-radius: var(--border-radius);
+}
+
+input,
+textarea,
+select {
+  border: 1px solid lightgrey;
+  transition: all 0.5s ease-out;
+  border-radius: var(--border-radius);
+}
+
+textarea {
+  resize: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border: 1px solid var(--secondary-color);
+}
+
+.section__contact {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.form__container {
+  width: 80%;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 2rem 3.5rem;
+}
+
+.form__container h3 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.input__group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 1.2rem;
+}
+
+.input__group label {
+  margin-bottom: 0.3rem;
+}
+
+.input__group input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.input__group input::placeholder {
+  font-size: 1rem;
+}
+
+.input__group textarea {
+  width: 100%;
+  height: 8rem;
+  font-size: 1rem;
+  padding: 1rem;
+  font-family: inherit;
+}
+
+.input__group select {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.input__group .btn__submit {
+  border: 1px solid transparent;
+  outline: none;
+  padding: 1rem 2rem;
+  background: var(--secondary-color);
+  border-radius: var(--border-radius);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.input__group .btn__submit:hover {
+  background: transparent;
+  border: 1px solid slateblue;
+  color: var(--secondary-color);
+}

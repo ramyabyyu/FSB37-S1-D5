@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/blog.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Day 4 | Blog Page</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="nav__brand">
+        <a href="index.html">
+          <img src="./assets/images/logo.png" alt="logo" />
+        </a>
+      </div>
+      <ul class="nav__links">
+        <li class="nav__item active">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="nav__item">
+          <a href="./blog.html">Blog</a>
+        </li>
+      </ul>
+      <div class="nav__end">
+        <a href="./contact-me.html">Contact Me</a>
+      </div>
+    </nav>
+
+    <!-- Section Form Add Blog -->
+    <section class="section__add-blog" id="add-blog">
+      <div class="form__container">
+        <h3>Add New Blog</h3>
+        <div class="validation__alert">
+          <p id="error__msg"></p>
+          <button type="button" class="close__btn" onclick="closeAlert()">
+            &times;
+          </button>
+        </div>
+
+        <form
+          action=""
+          id="add-blog__form"
+          autocomplete="off"
+          onsubmit="addBlog(event)"
+        >
+          <!-- Project Name -->
+          <div class="input__group">
+            <label for="name">Project Name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter your project name"
+            />
+          </div>
+
+          <!-- Date -->
+          <div class="row-input__group">
+            <div class="half-input__group">
+              <label for="start-date">Start Date</label>
+              <input type="date" id="start-date" />
+            </div>
+            <div class="half-input__group">
+              <label for="end-date">End Date</label>
+              <input type="date" id="end-date" />
+            </div>
+          </div>
+
+          <!-- Description -->
+          <div class="input__group">
+            <label for="description">Description</label>
+            <textarea name="description" id="description"></textarea>
+          </div>
+
+          <!-- Technology Checkboxes -->
+          <h4 class="tech">Technologies</h4>
+          <div class="checkboxes">
+            <div class="left">
+              <div class="checkbox__group">
+                <input
+                  type="checkbox"
+                  name="nodejs"
+                  id="nodejs"
+                  value="Node Js"
+                />
+                <label for="nodejs">Node Js</label>
+              </div>
+              <div class="checkbox__group">
+                <input
+                  type="checkbox"
+                  name="reactjs"
+                  id="reactjs"
+                  value="React Js"
+                />
+                <label for="reactjs">React Js</label>
+              </div>
+            </div>
+            <div class="right">
+              <div class="checkbox__group">
+                <input
+                  type="checkbox"
+                  name="nextjs"
+                  id="nextjs"
+                  value="Next Js"
+                />
+                <label for="nextjs">Next Js</label>
+              </div>
+              <div class="checkbox__group">
+                <input
+                  type="checkbox"
+                  name="typescript"
+                  id="typescript"
+                  value="Typescript"
+                />
+                <label for="typescript">Typescript</label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Upload Image Button and Image Preview -->
+          <div class="image__group">
+            <!-- Upload Button -->
+            <div class="upload">
+              <label for="upload" class="upload__btn">Choose Photo</label>
+              <input
+                type="file"
+                id="upload"
+                accept="image/*"
+                style="display: none"
+                onchange="preview(event.target.files[0])"
+              />
+            </div>
+            <!-- Image Preview Container -->
+            <div class="preview">
+              <i class="fa-solid fa-camera photo__icon"></i>
+              <img style="display: none" class="img__preview" />
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="input__group">
+            <button type="submit" class="btn__submit">Submit</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="blog__container" id="blog-container"></div>
+    </section>
+
+    <script src="./assets/js/blog.js"></script>
+  </body>
+</html>
