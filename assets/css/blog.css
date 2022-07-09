@@ -139,12 +139,17 @@ select:focus {
   margin-bottom: 2.5rem;
 }
 
-.left {
-  margin-right: 5rem;
+.checkbox__group {
+  margin-bottom: 0.8rem;
 }
 
-.checkbox__group:first-child {
-  margin-bottom: 1rem;
+.checkbox__group label,
+.checkbox__group input {
+  cursor: pointer;
+}
+
+.left {
+  margin-right: 5rem;
 }
 
 .image__group {
@@ -198,15 +203,15 @@ select:focus {
   border-radius: var(--border-radius);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   padding: 2rem 3.5rem;
-  display: grid;
-  grid-template-columns: repeat(3, 2fr);
-  grid-gap: 0.8rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .blog__items {
   width: 100%;
   border: 1px solid #bcb7b7;
   border-radius: var(--border-radius);
+  margin-bottom: 0.5rem;
 }
 
 .blog__image img {
@@ -217,10 +222,31 @@ select:focus {
   border-top-right-radius: var(--border-radius);
 }
 
-.blog__actions,
-.blog__title,
-.blog__date {
+.blog__header,
+.blog__body,
+.blog__techs,
+.blog__actions {
   padding: 0 0.8rem;
+}
+
+.blog__header .blog__duration {
+  color: #bcb7b7;
+}
+
+.blog__body {
+  margin-top: 1rem;
+  letter-spacing: 1px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.blog__techs {
+  margin-bottom: 1rem;
+}
+
+.blog__techs i {
+  font-size: 1.6rem;
+  margin-right: 1rem;
 }
 
 .blog__actions {
@@ -267,8 +293,4 @@ select:focus {
   overflow: hidden;
   text-overflow: ellipsis;
   height: 56px;
-}
-
-.blog__date p {
-  color: #8f8d8d;
 }
